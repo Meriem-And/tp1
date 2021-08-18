@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<h1> Bonjour Keven; </h1>
+{% block content %}
 
-<h2>Ce-ci est ma premiere page en utilisant un <strong style="color: blueviolet"> cadriciel </strong> </h2>
+<!--<h1> Bonjour Keven; </h1>
+
+<h2>Ce-ci est ma premiere page en utilisant un <strong style="color: blueviolet"> cadriciel </strong> </h2>-->
 
 
-<h3>Mes projets  </h3>
 <ul>
     {% for x in projet %}
-    <li> {{ x.titre }}</li>
+    <div class="card" style="width: 18rem;">
+        <img src="{{x.image_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">click</a>
+        </div>
+    </div>
+
     {% endfor %}
 </ul>
 
-</body>
-</html>
+{% endblock %}
