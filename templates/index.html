@@ -6,19 +6,21 @@
 
 <h2>Ce-ci est ma premiere page en utilisant un <strong style="color: blueviolet"> cadriciel </strong> </h2>-->
 
-
-<ul>
+<div class="container">
+<div class="row ">
     {% for x in projet %}
-    <div class="card" style="width: 18rem;">
-        <img src="{{x.image_url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">click</a>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{x.image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">"{{x.titre}}"</h5>
+                <p class="card-text">"{{x.description}}" </p>
+                <a href="#" class="btn btn-primary">click</a>
+            </div>
         </div>
     </div>
-
     {% endfor %}
-</ul>
-
+</div>
+</div>
 {% endblock %}
+
